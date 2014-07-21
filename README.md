@@ -1,4 +1,4 @@
-PRo-Database
+Lib-Database
 ============
 
 A library for easy accessing a derby database in a [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm) &amp; [Maven](http://maven.apache.org/) application. 

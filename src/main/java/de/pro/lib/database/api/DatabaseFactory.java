@@ -14,21 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.database.api;
+package de.pro.lib.database.api;
 
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.SQLException;
+import de.pro.lib.database.DBWDatabase;
 
 /**
  *
  * @author PRo
  */
-public interface IDatabase {
+public class DatabaseFactory {
+    private static IDatabase instance = null;
     
-    public Connection getConnection();
-    public Clob getClob(String text) throws SQLException;
-    public String getTextFromClob(final Clob clob) throws SQLException;
-    public void register(String databaseName, String user, String password);
-    public void shutdown() throws SQLException;
+    public static IDatabase getDefault() {
+        if (instance == null) {
+            instance = new DBWDatabase();
+        }
+        
+        return instance;
+    }
+    
+    private DatabaseFactory() { }
 }

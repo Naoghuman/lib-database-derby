@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.database;
+package de.pro.lib.database;
 
-import de.pro.database.api.IDatabase;
+import de.pro.lib.database.api.IDatabase;
 import de.pro.logger.api.LoggerFactory;
 import java.io.File;
 import java.sql.Clob;
