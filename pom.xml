@@ -10,13 +10,13 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <description>A library for easy accessing a derby database in a [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm) &amp; [Maven](http://maven.apache.org/) application. See https://github.com/Naoghuman/pro-database for more details.</description>
+    <description>A library for easy accessing a derby database in a [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm) &amp; [Maven](http://maven.apache.org/) application. See https://github.com/Naoghuman/lib-database for more details.</description>
+    <name>Lib-Database</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>PRo-Logger</artifactId>
+            <artifactId>Lib-Logger</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-    <name>Lib-Database</name>
 </project>

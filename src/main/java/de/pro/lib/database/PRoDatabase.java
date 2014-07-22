@@ -17,7 +17,7 @@
 package de.pro.lib.database;
 
 import de.pro.lib.database.api.IDatabase;
-import de.pro.logger.api.LoggerFactory;
+import de.pro.lib.logger.api.LoggerFactory;
 import java.io.File;
 import java.sql.Clob;
 import java.sql.Connection;
@@ -28,7 +28,7 @@ import java.sql.SQLException;
  * 
  * @author PRo
  */
-public final class DBWDatabase implements IDatabase {
+public final class PRoDatabase implements IDatabase {
     
     private static final String DATABASE_PATH =
             "jdbc:derby:"

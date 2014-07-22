@@ -16,7 +16,7 @@
  */
 package de.pro.lib.database.api;
 
-import de.pro.lib.database.DBWDatabase;
+import de.pro.lib.database.PRoDatabase;
 
 /**
  *
@@ -27,7 +27,7 @@ public class DatabaseFactory {
     
     public static IDatabase getDefault() {
         if (instance == null) {
-            instance = new DBWDatabase();
+            instance = new PRoDatabase();
         }
         
         return instance;
