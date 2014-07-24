@@ -19,12 +19,21 @@ package de.pro.lib.database.api;
 import de.pro.lib.database.PRoDatabase;
 
 /**
+ * The factory <code>de.pro.lib.database.api.DatabaseFactory</code> provides a 
+ * singleton instance of the Interface <code>de.pro.lib.database.api.IDatabase</code>.
  *
  * @author PRo
+ * @see de.pro.lib.database.api.IDatabase
  */
-public class DatabaseFactory {
+public final class DatabaseFactory {
     private static IDatabase instance = null;
     
+    /**
+     * Provides a singleton instance from the Interface <code>de.pro.lib.database.api.IDatabase</code>.
+     * 
+     * @return A singleton instance of <code>de.pro.lib.database.api.IDatabase</code>.
+     * @see de.pro.lib.database.api.IDatabase
+     */
     public static IDatabase getDefault() {
         if (instance == null) {
             instance = new PRoDatabase();

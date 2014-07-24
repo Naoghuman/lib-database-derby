@@ -37,6 +37,7 @@ public final class PRoDatabase implements IDatabase {
     private static final String DATABASE_CREATE_TRUE = ";create=true"; // NOI18N
     
     private Connection connection = null;
+    private String databaseName = null;
     
     @Override
     public Clob getClob(String text) throws SQLException {
@@ -59,6 +60,8 @@ public final class PRoDatabase implements IDatabase {
     
     @Override
     public void register(String databaseName, String user, String password) {
+        this.databaseName = databaseName;
+        
         LoggerFactory.getDefault().info(IDatabase.class,
                 "Check if database folder exists and create it if necessary"); // NOI18N
         
@@ -87,15 +90,15 @@ public final class PRoDatabase implements IDatabase {
 
     @Override
     public void shutdown() throws SQLException {
-        LoggerFactory.getDefault().info(IDatabase.class, "Shutdown derby"); // NOI18N
+        LoggerFactory.getDefault().info(IDatabase.class, "Close sql connection"); // NOI18N
         
-        DriverManager.getConnection("jdbc:derby:;shutdown=true"); // NOI18N
-        
-        // Check if the connection created or open
         if (connection != null && !connection.isClosed()) {
             connection.close();
         }
-        
         connection = null;
+        
+        LoggerFactory.getDefault().info(IDatabase.class, "Shutdown derby"); // NOI18N
+        
+        DriverManager.getConnection("jdbc:derby:" + databaseName + ";shutdown=true"); // NOI18N
     }
 }
