@@ -31,7 +31,9 @@ Example<a name="Example" />
  * @see de.pro.lib.database.api.IDatabase
  */
 public final class DatabaseFactory
+```
 
+```java
 /**
  * Create a database with the specific name in the folder System.getProperty("user.dir")
  * + File.separator + "database" if it not exists.
@@ -41,14 +43,18 @@ public final class DatabaseFactory
  * @param password The password for the database.
  */
 DatabaseFactory.getDefault().register(String databaseName, String user, String password);
+```
 
+```java
 /**
  * Provides a sql connection to the registered database.
  * 
  * @return The sql connection.
  */
 DatabaseFactory.getDefault().getConnection();
+```
 
+```java
 /**
  * Close the sql connection and shutdown the database.
  * 
@@ -75,7 +81,7 @@ Installation<a name="Installation" />
 
 * If not installed download the [JRE 8] or the [JDK 8].
   * Optional: To work better with [FXML] files in a [JavaFX] application download the [JavaFX Scene Builder] under 'Additional Resources'.
-* Choose your prefered IDE (e.g. [NetBeans], [Eclipse] or [IntelliJ IDEA]) for development.
+* Choose your preferred IDE (e.g. [NetBeans], [Eclipse] or [IntelliJ IDEA]) for development.
 * Download or clone [Lib-Database].
 * Download or clone [Lib-Logger].
 * Open the projects in your IDE and run them.
