@@ -25,6 +25,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
+ * The implementation from the Interface <code>de.pro.lib.database.api.IDatabase</code>.
  * 
  * @author PRo
  */
