@@ -2,6 +2,7 @@ Lib-Database
 ============
 
 A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [Maven] application.
+
 Current `version` is `0.0.1-SNAPSHOT` (07.2014).
 
 
@@ -69,7 +70,7 @@ DatabaseFactory.getDefault().shutdown() throws SQLException;
 Requirements<a name="Requirements" />
 ------------
 
-* On your system you need [JRE 8] installed.
+* On your system you need [JRE 8] or [JDK 8] installed.
 * The library [Lib-Database-0.0.1-SNAPSHOT.jar](#Installation).
   * Included is the [derby-10.10.2.0.jar].
 * The library [Lib-Logger-0.0.1-SNAPSHOT.jar](#Installation).
@@ -92,7 +93,7 @@ Installation<a name="Installation" />
 Documentation<a name="Documentation" />
 -------------
 
-Momentary only the [JavaDoc] in the library is available.
+Momentary only the [JavaDoc] in the library itself is available.
 
 
 
