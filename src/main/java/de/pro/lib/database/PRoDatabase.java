@@ -23,6 +23,8 @@ import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.sql.SQLTimeoutException;
 
 /**
  * The implementation from the Interface <code>de.pro.lib.database.api.IDatabase</code>.
@@ -41,10 +43,10 @@ public final class PRoDatabase implements IDatabase {
     private String databaseName = null;
     
     @Override
-    public Clob getClob(String text) throws SQLException {
+    public Clob getClob(String text) throws SQLException, SQLFeatureNotSupportedException {
         final Clob clob = this.getConnection().createClob();
         clob.setString(1, text);
-
+        
         return clob;
     }
     
@@ -54,7 +56,7 @@ public final class PRoDatabase implements IDatabase {
     }
     
     @Override
-    public String getTextFromClob(final Clob clob) throws SQLException {
+    public String getTextFromClob(final Clob clob) throws SQLException, SQLFeatureNotSupportedException {
         final long length = clob.length();
         return clob.getSubString(1, Integer.parseInt(String.valueOf(length)));
     }
@@ -90,7 +92,7 @@ public final class PRoDatabase implements IDatabase {
     }
 
     @Override
-    public void shutdown() throws SQLException {
+    public void shutdown() throws SQLException, SQLTimeoutException {
         LoggerFactory.getDefault().info(IDatabase.class, "Close sql connection"); // NOI18N
         
         if (connection != null && !connection.isClosed()) {
