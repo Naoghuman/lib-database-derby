@@ -3,7 +3,7 @@ Lib-Database
 
 A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [Maven] application.
 
-Current `version` is `0.0.1-SNAPSHOT` (07.2014).
+Current `version` is `0.0.2-SNAPSHOT` (08.2014).
 
 
 
@@ -65,6 +65,43 @@ DatabaseFactory.getDefault().getConnection();
 DatabaseFactory.getDefault().shutdown() throws SQLException;
 ```
 
+```java
+/**
+ * Use this <code>Interface</code> for versioning your database. Use the template
+ * {@link de.pro.lib.database.version.TemplateVnrForXy TemplateVnrForXy} to implement
+ * your changes in the database in the actual version.<p />
+ * 
+ * For example:<br />
+ * <ul>
+ * <li>Create package de.pro.lib.database.version.v0_1_0.</li>
+ * <li>In this new package create a new class <code>V0_1_0ForCategory</code>
+ * with the template.</li>
+ * <li>Integrate the new class <code>V0_1_0ForCategory</code> in the method
+ * {@link de.pro.lib.database.version.PrepareVersioning#init(java.lang.Boolean)}
+ * </ul>
+ *
+ * @author PRo
+ */
+public interface IVersion {
+    /**
+     * Initialize your table in this method.
+     */
+    public void initTable();
+    
+    /**
+     * Initialize you default data for your previous created table in this method.
+     * @see #initTable() initTable()
+     */
+    public void initDefaultData();
+    
+    /**
+     * Initialize your test data for your previous created table in this method.
+     * @see #initTable() initTable()
+     */
+    public void initTestData();
+}
+```
+
 
 
 Requirements<a name="Requirements" />
@@ -74,8 +111,8 @@ Requirements<a name="Requirements" />
 * The library [Lib-Database-0.0.1-SNAPSHOT.jar](#Installation).
   * Included is the [derby-10.10.2.0.jar].
 * The library [Lib-Logger-0.0.1-SNAPSHOT.jar](#Installation).
-  * Included is the [log4j-api-2.0-rc2.jar].
-  * Included is the [log4j-core-2.0-rc2.jar].
+  * Included is the [log4j-api-2.0.jar].
+  * Included is the [log4j-core-2.0.jar].
 
 
 Installation<a name="Installation" />
@@ -141,8 +178,8 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Database]:https://github.com/Naoghuman/lib-database
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.0-rc2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.0-rc2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests
