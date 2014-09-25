@@ -27,7 +27,7 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.sql.SQLTimeoutException;
 
 /**
- * The implementation from the Interface <code>de.pro.lib.database.api.IDatabase</code>.<br />
+ * The implementation from the Interface {@link de.pro.lib.database.api.IDatabase}.<br />
  * Access to this class is over the facade {@link de.pro.lib.database.api.DatabaseFacade}.
  * 
  * @author PRo
