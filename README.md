@@ -26,25 +26,25 @@ Example<a name="Example" />
 
 ```java
 /**
- * The factory <code>de.pro.lib.database.api.DatabaseFactory</code> provides a 
- * singleton instance of the Interface <code>de.pro.lib.database.api.IDatabase</code>.
+ * The facde {@link de.pro.lib.database.api.DatabaseFacade} provides a 
+ * singleton instance of the Interface {@link de.pro.lib.database.api.IDatabase}.
  *
  * @author PRo
  * @see de.pro.lib.database.api.IDatabase
  */
-public final class DatabaseFactory
+public final class DatabaseFacade
 ```
 
 ```java
 /**
- * Create a database with the specific name in the folder System.getProperty("user.dir")
- * + File.separator + "database" if it not exists.
+ * Create a database with the specific name in the folder <code>System.getProperty("user.dir")
+ * + File.separator + "database"</code> if it not exists.
  * 
  * @param databaseName The name for the database which should be created.
  * @param user The user for the database.
  * @param password The password for the database.
  */
-DatabaseFactory.getDefault().register(String databaseName, String user, String password);
+DatabaseFacade.getDefault().register(String databaseName, String user, String password);
 ```
 
 ```java
@@ -53,7 +53,7 @@ DatabaseFactory.getDefault().register(String databaseName, String user, String p
  * 
  * @return The sql connection.
  */
-DatabaseFactory.getDefault().getConnection();
+DatabaseFacade.getDefault().getConnection();
 ```
 
 ```java
@@ -62,7 +62,7 @@ DatabaseFactory.getDefault().getConnection();
  * 
  * @throws SQLException 
  */
-DatabaseFactory.getDefault().shutdown() throws SQLException;
+DatabaseFacade.getDefault().shutdown() throws SQLException;
 ```
 
 ```java
@@ -73,16 +73,17 @@ DatabaseFactory.getDefault().shutdown() throws SQLException;
  * 
  * For example:<br />
  * <ul>
- * <li>Create package de.pro.lib.database.version.v0_1_0.</li>
+ * <li>Create package de.pro.lib.database.provider.version.v0_1_0.</li>
  * <li>In this new package create a new class <code>V0_1_0ForCategory</code>
  * with the template.</li>
  * <li>Integrate the new class <code>V0_1_0ForCategory</code> in the method
- * {@link de.pro.lib.database.version.PrepareVersioning#init(java.lang.Boolean)}
+ * de.pro.lib.database.provider.version.Versioning.init(java.lang.Boolean)
  * </ul>
  *
  * @author PRo
+ * @see de.pro.lib.database.version.TemplateVnrForXy
  */
-public interface IVersion {
+public interface IVersioning {
     /**
      * Initialize your table in this method.
      */
@@ -109,10 +110,10 @@ Requirements<a name="Requirements" />
 
 * On your system you need [JRE 8] or [JDK 8] installed.
 * The library [Lib-Database-0.0.2-SNAPSHOT.jar](#Installation).
-  * Included is the [derby-10.10.2.0.jar].
-* The library [Lib-Logger-0.0.2-SNAPSHOT.jar](#Installation).
-  * Included is the [log4j-api-2.0.jar].
-  * Included is the [log4j-core-2.0.jar].
+  * Included is the [derby-10.11.1.1.jar].
+* The library [Lib-Logger-0.0.3.jar](#Installation).
+  * Included is the [log4j-api-2.0.2.jar].
+  * Included is the [log4j-core-2.0.2.jar].
 
 
 Installation<a name="Installation" />
@@ -137,7 +138,7 @@ Momentary only the [JavaDoc] in the library itself is available.
 Contribution<a name="Contribution" />
 ------------
 
-* If you find a bug I will be glad if you will report an [Issue].
+* If you find a `Bug` I will be glad if you will report an [Issue].
 * If you want to contribute to the project plz fork the project and do a [Pull Request].
 
 
@@ -145,14 +146,14 @@ Contribution<a name="Contribution" />
 License<a name="License" />
 -------
 
-PRo-Database is licensed under [General Public License 3.0].
+The project `Lib-Database` is licensed under [General Public License 3.0].
 
 
 
 Autor<a name="Autor" />
 -----
 
-Pro-Database is maintained by me, Peter Rogge. See [Contact](#Contact).
+The project `Lib-Database` is maintained by me, Peter Rogge. See [Contact](#Contact).
 
 
 
@@ -165,7 +166,7 @@ You can reach me under <peter.rogge@yahoo.de>.
 
 [//]: # (Links)
 [Apache Derby]:http://db.apache.org/derby/
-[derby-10.10.2.0.jar]:http://db.apache.org/derby/
+[derby-10.11.1.1.jar]:http://db.apache.org/derby/
 [Eclipse]:https://www.eclipse.org/
 [FXML]:http://docs.oracle.com/javafx/2/fxml_get_started/jfxpub-fxml_get_started.htm
 [General Public License 3.0]:http://www.gnu.org/licenses/gpl-3.0.en.html
@@ -178,8 +179,8 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Database]:https://github.com/Naoghuman/lib-database
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.0.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests

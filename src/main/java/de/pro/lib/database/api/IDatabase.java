@@ -23,13 +23,13 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.sql.SQLTimeoutException;
 
 /**
- * The <code>Interface</code> for the class <code>de.pro.lib.database.PRoDatabase</code>.
- * Over the factory <code>de.pro.lib.database.api.DatabaseFactory</code> you can 
- * access the methods in this <code>Interface</code>.
+ * The <code>Interface</code> for the class {@link de.pro.lib.database.PRoDatabase}.<br />
+ * Over the facade {@link de.pro.lib.database.api.DatabaseFacade} you can access
+ * the methods in this <code>Interface</code>.
  *
  * @author PRo
  * @see de.pro.lib.database.PRoDatabase
- * @see de.pro.lib.database.api.DatabaseFactory
+ * @see de.pro.lib.database.api.DatabaseFacade
  */
 public interface IDatabase {
     
@@ -61,8 +61,8 @@ public interface IDatabase {
     public String getTextFromClob(final Clob clob) throws SQLException, SQLFeatureNotSupportedException;
     
     /**
-     * Create a database with the specific name in the folder System.getProperty("user.dir")
-     * + File.separator + "database" if it not exists.
+     * Create a database with the specific name in the folder <code>System.getProperty("user.dir")
+     * + File.separator + "database"</code> if it not exists.
      * 
      * @param databaseName The name for the database which should be created.
      * @param user The user for the database.

@@ -17,7 +17,7 @@
 package de.pro.lib.database;
 
 import de.pro.lib.database.api.IDatabase;
-import de.pro.lib.logger.api.LoggerFactory;
+import de.pro.lib.logger.api.LoggerFacade;
 import java.io.File;
 import java.sql.Clob;
 import java.sql.Connection;
@@ -27,9 +27,12 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.sql.SQLTimeoutException;
 
 /**
- * The implementation from the Interface <code>de.pro.lib.database.api.IDatabase</code>.
+ * The implementation from the Interface <code>de.pro.lib.database.api.IDatabase</code>.<br />
+ * Access to this class is over the facade {@link de.pro.lib.database.api.DatabaseFacade}.
  * 
  * @author PRo
+ * @see de.pro.lib.database.api.IDatabase
+ * @see de.pro.lib.database.api.DatabaseFacade
  */
 public final class PRoDatabase implements IDatabase {
     
@@ -61,46 +64,62 @@ public final class PRoDatabase implements IDatabase {
         return clob.getSubString(1, Integer.parseInt(String.valueOf(length)));
     }
     
-    @Override
-    public void register(String databaseName, String user, String password) {
-        this.databaseName = databaseName;
-        
-        LoggerFactory.getDefault().info(IDatabase.class,
-                "Check if database folder exists and create it if necessary"); // NOI18N
+    private void initConnection(String databaseName, String user, String password) throws SQLException {
+            LoggerFacade.getDefault().info(this.getClass(),
+                    "Create connection to: " + DATABASE_PATH + databaseName); // NOI18N
+            
+            connection = DriverManager.getConnection(DATABASE_PATH + databaseName + DATABASE_CREATE_TRUE, user, password);
+            
+            databaseName = null;
+            user = null;
+            password = null;
+    }
+    
+    private void initDatabaseFolder(Boolean shouldDeleteFolders) {
+        // TODO delete folder if
+        LoggerFacade.getDefault().info(this.getClass(), "Check if database folder exists..."); // NOI18N
         
         final String path = System.getProperty("user.dir") + File.separator + "database"; // NOI18N
         final File file = new File(path);
         file.mkdir();
+    }
+    
+    private void initEmbbedDerbyDriver() throws Exception {
+        LoggerFacade.getDefault().info(this.getClass(),
+                "Init sql-driver: org.apache.derby.jdbc.EmbeddedDriver"); // NOI18N
+        
+        Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
+    }
+    
+    @Override
+    public void register(String databaseName, String user, String password) {
+        this.initDatabaseFolder(Boolean.FALSE); // TODO extract from parameter
         
         try {
-            LoggerFactory.getDefault().info(IDatabase.class, "Init sql-driver: org.apache.derby.jdbc.EmbeddedDriver"); // NOI18N
-            
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance(); // NOI18N
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException ex) {
-            LoggerFactory.getDefault().error(this.getClass(),
-                    "Can't create embbed-derby driver", ex); // NOI18N
+            this.initEmbbedDerbyDriver();
+        } catch (Exception ex) {
+            LoggerFacade.getDefault().error(this.getClass(),
+                    "Can't register embbed-derby driver", ex); // NOI18N
         }
+        
         try {
-            LoggerFactory.getDefault().info(IDatabase.class,
-                    "Create connection to: " + DATABASE_PATH + databaseName); // NOI18N
-            
-            connection = DriverManager.getConnection(DATABASE_PATH + databaseName + DATABASE_CREATE_TRUE, user, password);
+            this.initConnection(databaseName, user, password);
         } catch (SQLException ex) {
-            LoggerFactory.getDefault().error(this.getClass(),
+            LoggerFacade.getDefault().error(this.getClass(),
                     "Can't initialze sql connection", ex); // NOI18N
         }
     }
 
     @Override
     public void shutdown() throws SQLException, SQLTimeoutException {
-        LoggerFactory.getDefault().info(IDatabase.class, "Close sql connection"); // NOI18N
+        LoggerFacade.getDefault().info(IDatabase.class, "Close sql connection"); // NOI18N
         
         if (connection != null && !connection.isClosed()) {
             connection.close();
         }
         connection = null;
         
-        LoggerFactory.getDefault().info(IDatabase.class, "Shutdown derby"); // NOI18N
+        LoggerFacade.getDefault().info(IDatabase.class, "Shutdown derby"); // NOI18N
         
         DriverManager.getConnection("jdbc:derby:" + databaseName + ";shutdown=true"); // NOI18N
     }

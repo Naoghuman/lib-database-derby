@@ -19,19 +19,19 @@ package de.pro.lib.database.api;
 import de.pro.lib.database.PRoDatabase;
 
 /**
- * The factory <code>de.pro.lib.database.api.DatabaseFactory</code> provides a 
- * singleton instance of the Interface <code>de.pro.lib.database.api.IDatabase</code>.
+ * The facde {@link de.pro.lib.database.api.DatabaseFacade} provides a 
+ * singleton instance of the Interface {@link de.pro.lib.database.api.IDatabase}.
  *
  * @author PRo
  * @see de.pro.lib.database.api.IDatabase
  */
-public final class DatabaseFactory {
+public final class DatabaseFacade {
     private static IDatabase instance = null;
     
     /**
-     * Provides a singleton instance from the Interface <code>de.pro.lib.database.api.IDatabase</code>.
+     * Provides a singleton instance from the Interface {@link de.pro.lib.database.api.IDatabase}.
      * 
-     * @return A singleton instance of <code>de.pro.lib.database.api.IDatabase</code>.
+     * @return A singleton instance of {@link de.pro.lib.database.api.IDatabase}.
      * @see de.pro.lib.database.api.IDatabase
      */
     public static IDatabase getDefault() {
@@ -42,5 +42,5 @@ public final class DatabaseFactory {
         return instance;
     }
     
-    private DatabaseFactory() { }
+    private DatabaseFacade() { }
 }
