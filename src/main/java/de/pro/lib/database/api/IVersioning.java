@@ -14,8 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-package de.pro.lib.database.version.api;
+package de.pro.lib.database.api;
 
 /**
  * Use this <code>Interface</code> for versioning your database. Use the template
@@ -24,16 +23,17 @@ package de.pro.lib.database.version.api;
  * 
  * For example:<br />
  * <ul>
- * <li>Create package de.pro.lib.database.version.v0_1_0.</li>
+ * <li>Create package de.pro.lib.database.provider.version.v0_1_0.</li>
  * <li>In this new package create a new class <code>V0_1_0ForCategory</code>
  * with the template.</li>
  * <li>Integrate the new class <code>V0_1_0ForCategory</code> in the method
- * {@link de.pro.lib.database.version.PrepareVersioning#init(java.lang.Boolean)}
+ * de.pro.lib.database.provider.version.Versioning.init(java.lang.Boolean)
  * </ul>
  *
  * @author PRo
+ * @see de.pro.lib.database.version.TemplateVnrForXy
  */
-public interface IVersion {
+public interface IVersioning {
     /**
      * Initialize your table in this method.
      */

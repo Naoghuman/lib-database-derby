@@ -16,18 +16,17 @@
  */
 
 package de.pro.lib.database.version;
-
-import de.pro.lib.database.version.api.IVersion;
+import de.pro.lib.database.api.IVersioning;
 import java.sql.Connection;
 
 /**
  * Template for the injection from the Interface {@link de.pro.lib.database.version.api.IVersion IVersion}.
- * See the JavaDoc from {@link de.pro.lib.database.version.api.IVersion IVersion}
+ * See the JavaDoc from {@link de.pro.lib.database.api.IVersioning IVersioning}
  * for an advanced description.
  *
  * @author PRo
  */
-public class TemplateVnrForXy implements IVersion {
+public class TemplateVnrForXy implements IVersioning {
     
     private Connection connection = null;
 

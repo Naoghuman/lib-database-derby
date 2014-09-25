@@ -16,9 +16,8 @@
  */
 
 package de.pro.lib.database.version;
-
-import de.pro.lib.database.version.api.IVersion;
-import de.pro.lib.logger.api.LoggerFactory;
+import de.pro.lib.database.api.IVersioning;
+import de.pro.lib.logger.api.LoggerFacade;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -50,7 +49,7 @@ public class PrepareVersioning {
                 }
             }
         } catch (SQLException ex) {
-            LoggerFactory.getDefault().error(PrepareVersioning.class,
+            LoggerFacade.getDefault().error(PrepareVersioning.class,
                     "Can't check if table " + table + " exists...", ex); // NOI18N
         } finally {
             try {
@@ -79,7 +78,7 @@ public class PrepareVersioning {
                 return resultSet.getInt(1) == 0;
             }
         } catch (SQLException ex) {
-            LoggerFactory.getDefault().error(PrepareVersioning.class,
+            LoggerFacade.getDefault().error(PrepareVersioning.class,
                     "Can't count entries in table " + table, ex); // NOI18N
         } finally {
             try {
@@ -136,7 +135,7 @@ System.out.println("\"v1.1.0\".compareTo(\"v1.1.1\"): " + "v1.1.0".compareTo("v1
 //        }
     }
     
-    private void init(IVersion version, Boolean shouldCreateTestData) {
+    private void init(IVersioning version, Boolean shouldCreateTestData) {
         version.initTable();
         version.initDefaultData();
         
