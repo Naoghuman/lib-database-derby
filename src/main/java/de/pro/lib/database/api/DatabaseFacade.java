@@ -19,7 +19,7 @@ package de.pro.lib.database.api;
 import de.pro.lib.database.PRoDatabase;
 
 /**
- * The facde {@link de.pro.lib.database.api.DatabaseFacade} provides a 
+ * The facade {@link de.pro.lib.database.api.DatabaseFacade} provides a 
  * singleton instance of the Interface {@link de.pro.lib.database.api.IDatabase}.
  *
  * @author PRo
