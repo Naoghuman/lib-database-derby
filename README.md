@@ -109,7 +109,7 @@ Requirements<a name="Requirements" />
 ------------
 
 * On your system you need [JRE 8] or [JDK 8] installed.
-* The library [Lib-Database-0.0.2.jar](#Installation).
+* The library [Lib-Database-0.0.3.jar](#Installation).
   * Included is the [derby-10.11.1.1.jar].
 * The library [Lib-Logger-0.1.1.jar](#Installation).
   * Included is the [log4j-api-2.3.jar].
