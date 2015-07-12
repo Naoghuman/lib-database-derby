@@ -36,9 +36,7 @@ import java.sql.SQLTimeoutException;
  */
 public final class PRoDatabase implements IDatabase {
     
-    private static final String DATABASE_PATH =
-            "jdbc:derby:" // NOI18N
-            + System.getProperty("user.dir") // NOI18N
+    private static final String DATABASE_PATH = "jdbc:derby:" + System.getProperty("user.dir") // NOI18N
             + File.separator + "database" + File.separator; // NOI18N
     private static final String DATABASE_CREATE_TRUE = ";create=true"; // NOI18N
     
@@ -65,7 +63,7 @@ public final class PRoDatabase implements IDatabase {
     }
     
     private void initConnection(String databaseName, String user, String password) throws SQLException {
-            LoggerFacade.getDefault().info(this.getClass(),
+            LoggerFacade.getDefault().own(this.getClass(),
                     "Create connection to: " + DATABASE_PATH + databaseName); // NOI18N
             
             connection = DriverManager.getConnection(DATABASE_PATH + databaseName + DATABASE_CREATE_TRUE, user, password);
@@ -77,7 +75,7 @@ public final class PRoDatabase implements IDatabase {
     
     private void initDatabaseFolder(Boolean shouldDeleteFolders) {
         // TODO delete folder if
-        LoggerFacade.getDefault().info(this.getClass(), "Check if database folder exists..."); // NOI18N
+        LoggerFacade.getDefault().own(this.getClass(), "Check if database folder exists..."); // NOI18N
         
         final String path = System.getProperty("user.dir") + File.separator + "database"; // NOI18N
         final File file = new File(path);
@@ -85,10 +83,10 @@ public final class PRoDatabase implements IDatabase {
     }
     
     private void initEmbbedDerbyDriver() throws Exception {
-        LoggerFacade.getDefault().info(this.getClass(),
+        LoggerFacade.getDefault().own(this.getClass(),
                 "Init sql-driver: org.apache.derby.jdbc.EmbeddedDriver"); // NOI18N
         
-        Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
+        Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance(); // NOI18N
     }
     
     @Override
@@ -112,14 +110,14 @@ public final class PRoDatabase implements IDatabase {
 
     @Override
     public void shutdown() throws SQLException, SQLTimeoutException {
-        LoggerFacade.getDefault().info(IDatabase.class, "Close sql connection"); // NOI18N
+        LoggerFacade.getDefault().own(IDatabase.class, "Close sql connection"); // NOI18N
         
         if (connection != null && !connection.isClosed()) {
             connection.close();
         }
         connection = null;
         
-        LoggerFacade.getDefault().info(IDatabase.class, "Shutdown derby"); // NOI18N
+        LoggerFacade.getDefault().own(IDatabase.class, "Shutdown derby"); // NOI18N
         
         DriverManager.getConnection("jdbc:derby:" + databaseName + ";shutdown=true"); // NOI18N
     }

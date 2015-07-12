@@ -111,9 +111,9 @@ Requirements<a name="Requirements" />
 * On your system you need [JRE 8] or [JDK 8] installed.
 * The library [Lib-Database-0.0.2.jar](#Installation).
   * Included is the [derby-10.11.1.1.jar].
-* The library [Lib-Logger-0.0.3.jar](#Installation).
-  * Included is the [log4j-api-2.0.2.jar].
-  * Included is the [log4j-core-2.0.2.jar].
+* The library [Lib-Logger-0.1.1.jar](#Installation).
+  * Included is the [log4j-api-2.3.jar].
+  * Included is the [log4j-core-2.3.jar].
 
 
 Installation<a name="Installation" />
@@ -179,8 +179,8 @@ You can reach me under <peter.rogge@yahoo.de>.
 [JRE 8]:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [Lib-Database]:https://github.com/Naoghuman/lib-database
 [Lib-Logger]:https://github.com/Naoghuman/lib-logger
-[log4j-api-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
-[log4j-core-2.0.2.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-api-2.3.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
+[log4j-core-2.3.jar]:https://logging.apache.org/log4j/2.0/log4j-web/dependencies.html
 [Maven]:http://maven.apache.org/
 [NetBeans]:https://netbeans.org/
 [Pull Request]:https://help.github.com/articles/using-pull-requests
