@@ -31,7 +31,7 @@ import java.sql.SQLTimeoutException;
  * @see de.pro.lib.database.PRoDatabase
  * @see de.pro.lib.database.api.DatabaseFacade
  */
-public interface IDatabase {
+public interface ILibDatabase {
     
     /**
      * Provides a sql connection to the registered database.

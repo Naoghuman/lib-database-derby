@@ -16,7 +16,7 @@
  */
 package de.pro.lib.database;
 
-import de.pro.lib.database.api.IDatabase;
+import de.pro.lib.database.api.ILibDatabase;
 import de.pro.lib.logger.api.LoggerFacade;
 import java.io.File;
 import java.sql.Clob;
@@ -27,14 +27,14 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.sql.SQLTimeoutException;
 
 /**
- * The implementation from the Interface {@link de.pro.lib.database.api.IDatabase}.<br />
+ * The implementation from the Interface {@link de.pro.lib.database.api.ILibDatabase}.<br />
  * Access to this class is over the facade {@link de.pro.lib.database.api.DatabaseFacade}.
  * 
  * @author PRo
- * @see de.pro.lib.database.api.IDatabase
+ * @see de.pro.lib.database.api.ILibDatabase
  * @see de.pro.lib.database.api.DatabaseFacade
  */
-public final class PRoDatabase implements IDatabase {
+public final class PRoDatabase implements ILibDatabase {
     
     private static final String DATABASE_PATH = "jdbc:derby:" + System.getProperty("user.dir") // NOI18N
             + File.separator + "database" + File.separator; // NOI18N
@@ -110,14 +110,14 @@ public final class PRoDatabase implements IDatabase {
 
     @Override
     public void shutdown() throws SQLException, SQLTimeoutException {
-        LoggerFacade.getDefault().own(IDatabase.class, "Close sql connection"); // NOI18N
+        LoggerFacade.getDefault().own(ILibDatabase.class, "Close sql connection"); // NOI18N
         
         if (connection != null && !connection.isClosed()) {
             connection.close();
         }
         connection = null;
         
-        LoggerFacade.getDefault().own(IDatabase.class, "Shutdown derby"); // NOI18N
+        LoggerFacade.getDefault().own(ILibDatabase.class, "Shutdown derby"); // NOI18N
         
         DriverManager.getConnection("jdbc:derby:" + databaseName + ";shutdown=true"); // NOI18N
     }

@@ -117,7 +117,7 @@ System.out.println("\"v1.1.0\".compareTo(\"v1.1.1\"): " + "v1.1.0".compareTo("v1
 //        final String actualVersion = PreferencesFactory.getDefault().get(
 //                IPreferences.SYSTEM_APPLICATION__VERSION,
 //                IPreferences.SYSTEM_APPLICATION__VERSION_DEFAULT_VALUE);
-//        LoggerFactory.getDefault().info(IDatabase.class,
+//        LoggerFactory.getDefault().info(ILibDatabase.class,
 //                String.format("new.version=%s <-> %s=actual.version", // NOI18N
 //                        newVersion, actualVersion));
 

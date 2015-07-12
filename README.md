@@ -27,10 +27,10 @@ Examples<a name="Examples" />
 ```java
 /**
  * The facade {@link de.pro.lib.database.api.DatabaseFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.database.api.IDatabase}.
+ * singleton instance of the Interface {@link de.pro.lib.database.api.ILibDatabase}.
  *
  * @author PRo
- * @see de.pro.lib.database.api.IDatabase
+ * @see de.pro.lib.database.api.ILibDatabase
  */
 public final class DatabaseFacade
 ```

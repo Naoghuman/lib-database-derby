@@ -20,22 +20,22 @@ import de.pro.lib.database.PRoDatabase;
 
 /**
  * The facade {@link de.pro.lib.database.api.DatabaseFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.database.api.IDatabase}.
+ * singleton instance of the Interface {@link de.pro.lib.database.api.ILibDatabase}.
  *
  * @author PRo
- * @see de.pro.lib.database.api.IDatabase
+ * @see de.pro.lib.database.api.ILibDatabase
  */
 public final class DatabaseFacade {
     
-    private static IDatabase instance = null;
+    private static ILibDatabase instance = null;
     
     /**
-     * Provides a singleton instance from the Interface {@link de.pro.lib.database.api.IDatabase}.
+     * Provides a singleton instance from the Interface {@link de.pro.lib.database.api.ILibDatabase}.
      * 
-     * @return A singleton instance of {@link de.pro.lib.database.api.IDatabase}.
-     * @see de.pro.lib.database.api.IDatabase
+     * @return A singleton instance of {@link de.pro.lib.database.api.ILibDatabase}.
+     * @see de.pro.lib.database.api.ILibDatabase
      */
-    public static IDatabase getDefault() {
+    public static ILibDatabase getDefault() {
         if (instance == null) {
             instance = new PRoDatabase();
         }
