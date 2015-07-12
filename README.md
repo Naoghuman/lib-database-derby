@@ -3,7 +3,7 @@ Lib-Database
 
 A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [Maven] application.
 
-Current `version` is `0.0.2` (09.2014).
+Current `version` is `0.0.3` (07.2015).
 
 
 
