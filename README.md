@@ -10,7 +10,7 @@ Current `version` is `0.0.2` (09.2014).
 Content
 -------
 
-* [Example](#Example)
+* [Examples](#Examples)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
 * [Documentation](#Documentation)
@@ -21,7 +21,7 @@ Content
 
 
 
-Example<a name="Example" />
+Examples<a name="Examples" />
 -------
 
 ```java
