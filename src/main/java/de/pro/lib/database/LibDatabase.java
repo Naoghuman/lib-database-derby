@@ -34,7 +34,7 @@ import java.sql.SQLTimeoutException;
  * @see de.pro.lib.database.api.ILibDatabase
  * @see de.pro.lib.database.api.DatabaseFacade
  */
-public final class PRoDatabase implements ILibDatabase {
+public final class LibDatabase implements ILibDatabase {
     
     private static final String DATABASE_PATH = "jdbc:derby:" + System.getProperty("user.dir") // NOI18N
             + File.separator + "database" + File.separator; // NOI18N

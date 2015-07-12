@@ -16,7 +16,7 @@
  */
 package de.pro.lib.database.api;
 
-import de.pro.lib.database.PRoDatabase;
+import de.pro.lib.database.LibDatabase;
 
 /**
  * The facade {@link de.pro.lib.database.api.DatabaseFacade} provides a 
@@ -37,7 +37,7 @@ public final class DatabaseFacade {
      */
     public static ILibDatabase getDefault() {
         if (instance == null) {
-            instance = new PRoDatabase();
+            instance = new LibDatabase();
         }
         
         return instance;

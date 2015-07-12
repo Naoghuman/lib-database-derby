@@ -23,12 +23,12 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.sql.SQLTimeoutException;
 
 /**
- * The <code>Interface</code> for the class {@link de.pro.lib.database.PRoDatabase}.<br />
+ * The <code>Interface</code> for the class {@link de.pro.lib.database.LibDatabase}.<br />
  * Over the facade {@link de.pro.lib.database.api.DatabaseFacade} you can access
  * the methods in this <code>Interface</code>.
  *
  * @author PRo
- * @see de.pro.lib.database.PRoDatabase
+ * @see de.pro.lib.database.LibDatabase
  * @see de.pro.lib.database.api.DatabaseFacade
  */
 public interface ILibDatabase {
