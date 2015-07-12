@@ -20,9 +20,9 @@ import de.pro.lib.database.api.IVersioning;
 import java.sql.Connection;
 
 /**
- * Template for the injection from the Interface {@link de.pro.lib.database.api.IVersioning IVersioning}.<br />
- * See the JavaDoc from {@link de.pro.lib.database.api.IVersioning IVersioning}
- * for an advanced description.
+ * Template for the injection from the Interface {@link de.pro.lib.database.api.IVersioning}.<br />
+ * See the JavaDoc from {@link de.pro.lib.database.api.IVersioning} for an 
+ * advanced description.
  *
  * @author PRo
  */

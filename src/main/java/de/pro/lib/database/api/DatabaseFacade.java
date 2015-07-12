@@ -26,6 +26,7 @@ import de.pro.lib.database.PRoDatabase;
  * @see de.pro.lib.database.api.IDatabase
  */
 public final class DatabaseFacade {
+    
     private static IDatabase instance = null;
     
     /**
@@ -43,4 +44,5 @@ public final class DatabaseFacade {
     }
     
     private DatabaseFacade() { }
+    
 }

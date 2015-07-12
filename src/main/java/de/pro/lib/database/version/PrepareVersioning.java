@@ -100,8 +100,7 @@ System.out.println("\"v1.1.0\".compareTo(\"v1.1.1\"): " + "v1.1.0".compareTo("v1
         */
     /**
      * In this method all new versions are done. See the JavaDoc from 
-     * {@link de.pro.lib.database.api.IVersioning IVersioning} for an advanced
-     * description.
+     * {@link de.pro.lib.database.api.IVersioning} for an advanced description.
      * 
      * @param shouldCreateTestData If <code>true</code> then test data will create,
      * otherwise not.

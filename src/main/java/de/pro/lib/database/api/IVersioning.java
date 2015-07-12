@@ -34,6 +34,7 @@ package de.pro.lib.database.api;
  * @see de.pro.lib.database.version.TemplateVnrForXy
  */
 public interface IVersioning {
+    
     /**
      * Initialize your table in this method.
      */
@@ -41,13 +42,16 @@ public interface IVersioning {
     
     /**
      * Initialize you default data for your previous created table in this method.
-     * @see #initTable() initTable()
+     * 
+     * @see #initTable()
      */
     public void initDefaultData();
     
     /**
      * Initialize your test data for your previous created table in this method.
-     * @see #initTable() initTable()
+     * 
+     * @see #initTable()
      */
     public void initTestData();
+    
 }

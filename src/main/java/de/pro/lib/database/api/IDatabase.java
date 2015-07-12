@@ -41,7 +41,7 @@ public interface IDatabase {
     public Connection getConnection();
     
     /**
-     * Convert a <code>Clob</code> for a <code>String</code>.
+     * Convert a {@link java.sql.Clob} for a {@link java.lang.String}.
      * 
      * @param text The <code>String</code> which should be convert to a <code>Clob</code>.
      * @return The converted <code>Clob</code>.
@@ -51,7 +51,7 @@ public interface IDatabase {
     public Clob getClob(String text) throws SQLException, SQLFeatureNotSupportedException;
     
     /**
-     * Convert a <code>String</code> from a <code>Clob</code>.
+     * Convert a {@link java.lang.String} from a {@link java.sql.Clob}.
      * 
      * @param clob The <code>Clob</code> which should be convert to a <code>String</code>.
      * @return The converted <code>String</code>.

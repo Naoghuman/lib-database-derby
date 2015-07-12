@@ -37,7 +37,7 @@ import java.sql.SQLTimeoutException;
 public final class PRoDatabase implements IDatabase {
     
     private static final String DATABASE_PATH =
-            "jdbc:derby:"
+            "jdbc:derby:" // NOI18N
             + System.getProperty("user.dir") // NOI18N
             + File.separator + "database" + File.separator; // NOI18N
     private static final String DATABASE_CREATE_TRUE = ";create=true"; // NOI18N
