@@ -1,4 +1,4 @@
-Welcome to `Lib-Database-Derby` with the new release `X.Y.Z`.
+Welcome to `Lib-Database-Derby` with the new release `0.2.0`.
 
 A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [Maven] application.
 
