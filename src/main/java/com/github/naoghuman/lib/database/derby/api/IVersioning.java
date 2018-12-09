@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.database.api;
+package com.github.naoghuman.lib.database.derby.api;
 
 /**
  * Use this <code>Interface</code> for versioning your database. Use the template

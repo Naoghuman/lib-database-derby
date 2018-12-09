@@ -1,4 +1,4 @@
 /**
  * Contains <code>Templates</code> for <code>Versioning</code>.
  */
-package de.pro.lib.database.version;
+package com.github.naoghuman.lib.database.derby.version;

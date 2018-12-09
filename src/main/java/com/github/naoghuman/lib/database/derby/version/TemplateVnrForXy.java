@@ -15,13 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.pro.lib.database.version;
-import de.pro.lib.database.api.IVersioning;
+package com.github.naoghuman.lib.database.derby.version;
+import com.github.naoghuman.lib.database.derby.api.IVersioning;
 import java.sql.Connection;
 
 /**
- * Template for the injection from the Interface {@link de.pro.lib.database.api.IVersioning}.<br />
- * See the JavaDoc from {@link de.pro.lib.database.api.IVersioning} for an 
+ * Template for the injection from the Interface {@link com.github.naoghuman.lib.database.derby.api.IVersioning}.<br />
+ * See the JavaDoc from {@link com.github.naoghuman.lib.database.derby.api.IVersioning} for an 
  * advanced description.
  *
  * @author PRo

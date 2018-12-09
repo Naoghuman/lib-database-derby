@@ -28,6 +28,7 @@ A library for easy accessing a Apache Derby database in a JavaFX & Maven applica
 
 
 #### Refactoring
+#2 [lib] Rename project from 'lib-database' to 'lib-database-derby'.
 
 
 

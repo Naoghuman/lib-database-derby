@@ -14,26 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.database.api;
+package com.github.naoghuman.lib.database.derby.api;
 
-import de.pro.lib.database.LibDatabase;
+import com.github.naoghuman.lib.database.derby.LibDatabase;
 
 /**
- * The facade {@link de.pro.lib.database.api.DatabaseFacade} provides a 
- * singleton instance of the Interface {@link de.pro.lib.database.api.ILibDatabase}.
+ * The facade {@link com.github.naoghuman.lib.database.derby.api.DatabaseFacade} provides a 
+ * singleton instance of the Interface {@link com.github.naoghuman.lib.database.derby.api.ILibDatabase}.
  *
  * @author PRo
- * @see de.pro.lib.database.api.ILibDatabase
+ * @see com.github.naoghuman.lib.database.derby.api.ILibDatabase
  */
 public final class DatabaseFacade {
     
     private static ILibDatabase instance = null;
     
     /**
-     * Provides a singleton instance from the Interface {@link de.pro.lib.database.api.ILibDatabase}.
+     * Provides a singleton instance from the Interface {@link com.github.naoghuman.lib.database.derby.api.ILibDatabase}.
      * 
-     * @return A singleton instance of {@link de.pro.lib.database.api.ILibDatabase}.
-     * @see de.pro.lib.database.api.ILibDatabase
+     * @return A singleton instance of {@link com.github.naoghuman.lib.database.derby.api.ILibDatabase}.
+     * @see com.github.naoghuman.lib.database.derby.api.ILibDatabase
      */
     public static ILibDatabase getDefault() {
         if (instance == null) {

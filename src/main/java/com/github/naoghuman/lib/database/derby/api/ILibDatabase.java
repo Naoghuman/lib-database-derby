@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.pro.lib.database.api;
+package com.github.naoghuman.lib.database.derby.api;
 
 import java.sql.Clob;
 import java.sql.Connection;
@@ -24,12 +24,12 @@ import java.sql.SQLTimeoutException;
 
 /**
  * The <code>Interface</code> for the class {@link de.pro.lib.database.LibDatabase}.<br />
- * Over the facade {@link de.pro.lib.database.api.DatabaseFacade} you can access
+ * Over the facade {@link com.github.naoghuman.lib.database.derby.api.DatabaseFacade} you can access
  * the methods in this <code>Interface</code>.
  *
  * @author PRo
  * @see de.pro.lib.database.LibDatabase
- * @see de.pro.lib.database.api.DatabaseFacade
+ * @see com.github.naoghuman.lib.database.derby.api.DatabaseFacade
  */
 public interface ILibDatabase {
     
