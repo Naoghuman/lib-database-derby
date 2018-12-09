@@ -28,6 +28,7 @@ A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [M
 
 #### Documentation
 #9 [doc] Add 'tags' to the GitHub project.
+#7 [doc] Create new concept about the future state from the library.
 
 
 

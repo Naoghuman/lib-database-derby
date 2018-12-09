@@ -1,0 +1,55 @@
+--------------------------------------------------------------------------------
+CONCEPT 'Lib-Database-Derby v0.1.0'
+--------------------------------------------------------------------------------
+DESCRIPTION
+In this concept I will describe the future concept from the library 'Lib-Database-Derby'.
+
+With the library 'Lib-Database-Derby' the developer should have the possibilities 
+to connect, crud and managed all actions in context from the database handling.
+
+--------------------------------------------------------------------------------
+SPECIFICATION
+Main topics
+1) DerbyConnectionFactory
+    - Allowed to drop the database.
+    - Create the database if it not exists.
+    - Connect to the database.
+    - Access to the connection.
+    - Shutdown the database.
+
+2) Enum DerbySqlType: INITIALIZATION, DEFAULT, MIGRATION, TEST;
+3) Annotations
+   - DerbySql
+      - Class level
+      - attributes: version (mayor (int), minor (int), patch (int))
+      - attribute : type (enum DerbySqlType)
+   - DerbySqlAction
+      - Method level
+      - attribute: sequence (int)
+
+4) DerbyDatabaseFactory
+    - Execute 
+       - all DerbySql           (ordered by version)
+       - for every DerbySqlType (order see above (1-3), (4))
+       - all DerbySqlAction     (ordered by sequence)
+    - Possibility to catch all actions in db?
+       - Do only what isn't done.
+
+--------------------------------------------------------------------------------
+LINKS
+ - ...
+
+--------------------------------------------------------------------------------
+EXTRAS
+ - ...
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
