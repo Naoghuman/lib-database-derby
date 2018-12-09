@@ -11,6 +11,7 @@ A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [M
 
 
 #### Feature
+#5 [lib] Add folder 'concept' to the library with a concept template.
 #4 [lib] Add badges from img.shield.io to the ReadMe.md.
 #3 [lib] Add folder 'release' with template to the library.
 #1 [ci] Connect the GitHub project with Travis CI.
