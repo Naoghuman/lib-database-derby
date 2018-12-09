@@ -41,6 +41,11 @@
         <url>https://github.com/Naoghuman/lib-database-derby.git</url>
     </scm>
     
+    <ciManagement>
+        <system>Travis</system>
+        <url>https://travis-ci.org/Naoghuman/lib-database-derby</url>
+    </ciManagement>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>

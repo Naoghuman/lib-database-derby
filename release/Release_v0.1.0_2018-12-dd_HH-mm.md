@@ -12,6 +12,7 @@ A library for easy accessing a Apache Derby database in a JavaFX & Maven applica
 
 #### Feature
 #3 [lib] Add folder 'release' with template to the library.
+#1 [ci] Connect the GitHub project with Travis CI.
 
 
 
