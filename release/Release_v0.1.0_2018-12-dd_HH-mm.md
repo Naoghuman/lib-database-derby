@@ -24,6 +24,7 @@ A library for easy accessing a Apache Derby database in a JavaFX & Maven applica
 
 
 #### Documentation
+#9 [doc] Add 'tags' to the GitHub project.
 
 
 
