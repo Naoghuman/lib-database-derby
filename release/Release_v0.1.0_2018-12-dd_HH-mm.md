@@ -32,6 +32,7 @@ A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [M
 
 
 #### Refactoring
+#10 [api] Move classes and interfaces in the packages 'core' and 'internal'.
 #6 [pom] Update pom.xml. Check structure, dependencies aso.
 #2 [lib] Rename project from 'lib-database' to 'lib-database-derby'.
 

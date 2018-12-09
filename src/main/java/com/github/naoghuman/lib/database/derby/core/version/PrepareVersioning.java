@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.github.naoghuman.lib.database.derby.version;
+package com.github.naoghuman.lib.database.derby.core.version;
 
 import com.github.naoghuman.lib.logger.core.LoggerFacade;
-import com.github.naoghuman.lib.database.derby.api.IVersioning;
+import com.github.naoghuman.lib.database.derby.core.IVersioning;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -101,11 +101,11 @@ System.out.println("\"v1.1.0\".compareTo(\"v1.1.1\"): " + "v1.1.0".compareTo("v1
         */
     /**
      * In this method all new versions are done. See the JavaDoc from 
-     * {@link com.github.naoghuman.lib.database.derby.api.IVersioning} for an advanced description.
+     * {@link com.github.naoghuman.lib.database.derby.core.IVersioning} for an advanced description.
      * 
      * @param shouldCreateTestData If <code>true</code> then test data will create,
      * otherwise not.
-     * @see com.github.naoghuman.lib.database.derby.api.IVersioning
+     * @see com.github.naoghuman.lib.database.derby.core.IVersioning
      */
     public void init(Boolean shouldCreateTestData) {
 //        String newVersion = PropertiesFactory.getDefault().getProperty(

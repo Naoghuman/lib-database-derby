@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.naoghuman.lib.database.derby;
+package com.github.naoghuman.lib.database.derby.internal;
 
 import com.github.naoghuman.lib.logger.core.LoggerFacade;
-import com.github.naoghuman.lib.database.derby.api.ILibDatabase;
+import com.github.naoghuman.lib.database.derby.core.ILibDatabase;
 import java.io.File;
 import java.sql.Clob;
 import java.sql.Connection;
@@ -27,12 +27,12 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.sql.SQLTimeoutException;
 
 /**
- * The implementation from the Interface {@link com.github.naoghuman.lib.database.derby.api.ILibDatabase}.<br />
- * Access to this class is over the facade {@link com.github.naoghuman.lib.database.derby.api.DatabaseFacade}.
+ * The implementation from the Interface {@link com.github.naoghuman.lib.database.derby.core.ILibDatabase}.<br />
+ * Access to this class is over the facade {@link com.github.naoghuman.lib.database.derby.core.DatabaseFacade}.
  * 
  * @author PRo
- * @see com.github.naoghuman.lib.database.derby.api.ILibDatabase
- * @see com.github.naoghuman.lib.database.derby.api.DatabaseFacade
+ * @see com.github.naoghuman.lib.database.derby.core.ILibDatabase
+ * @see com.github.naoghuman.lib.database.derby.core.DatabaseFacade
  */
 public final class LibDatabase implements ILibDatabase {
     
