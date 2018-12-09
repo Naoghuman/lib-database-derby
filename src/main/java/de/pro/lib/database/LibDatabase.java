@@ -16,8 +16,8 @@
  */
 package de.pro.lib.database;
 
+import com.github.naoghuman.lib.logger.core.LoggerFacade;
 import de.pro.lib.database.api.ILibDatabase;
-import de.pro.lib.logger.api.LoggerFacade;
 import java.io.File;
 import java.sql.Clob;
 import java.sql.Connection;

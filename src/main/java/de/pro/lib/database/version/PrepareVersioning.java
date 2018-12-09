@@ -16,8 +16,9 @@
  */
 
 package de.pro.lib.database.version;
+
+import com.github.naoghuman.lib.logger.core.LoggerFacade;
 import de.pro.lib.database.api.IVersioning;
-import de.pro.lib.logger.api.LoggerFacade;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
