@@ -1,6 +1,6 @@
 Welcome to `Lib-Database-Derby` with the new release `0.1.0`.
 
-A library for easy accessing a Apache Derby database in a JavaFX & Maven application.
+A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [Maven] application.
 
 
 
@@ -11,6 +11,7 @@ A library for easy accessing a Apache Derby database in a JavaFX & Maven applica
 
 
 #### Feature
+#4 [lib] Add badges from img.shield.io to the ReadMe.md.
 #3 [lib] Add folder 'release' with template to the library.
 #1 [ci] Connect the GitHub project with Travis CI.
 
@@ -49,5 +50,6 @@ Naoghuman
 
 
 [//]: # (Links)
-
-
+[Apache Derby]:http://db.apache.org/derby/
+[JavaFX]:http://docs.oracle.com/javase/8/javase-clienttechnologies.htm
+[Maven]:http://maven.apache.org/

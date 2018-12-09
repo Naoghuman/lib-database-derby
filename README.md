@@ -1,5 +1,14 @@
 Lib-Database
-============
+===
+
+[![Build Status](https://travis-ci.org/Naoghuman/lib-database-derby.svg?branch=master)](https://travis-ci.org/Naoghuman/lib-database-derby)
+[![license: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![GitHub release](https://img.shields.io/github/release/Naoghuman/lib-database-derby.svg)](https://GitHub.com/Naoghuman/lib-database-derby/releases/)
+
+
+
+Intention
+---
 
 A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [Maven] application.
 
@@ -8,7 +17,7 @@ Current `version` is `0.0.3` (07.2015).
 
 
 Content
--------
+---
 
 * [Examples](#Examples)
 * [Requirements](#Requirements)
