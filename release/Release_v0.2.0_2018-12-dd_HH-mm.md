@@ -23,6 +23,7 @@ A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [M
 
 
 #### Documentation
+#11 [doc] Update the concept 'Concept_Lib-Database-Derby_v0.1.0_2018-12-09.txt'.
 
 
 
