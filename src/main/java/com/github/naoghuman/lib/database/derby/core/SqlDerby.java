@@ -38,7 +38,7 @@ public @interface SqlDerby {
      * @version 0.2.0
      * @author  Naoghuman
      */
-    Type type() default Type.NO_TYPE;
+    public Type type() default Type.NO_TYPE;
     
     /**
      * 
@@ -47,7 +47,7 @@ public @interface SqlDerby {
      * @version 0.2.0
      * @author  Naoghuman
      */
-    int mayor() default 0;
+    public int mayor() default 0;
     
     /**
      * 
@@ -56,7 +56,7 @@ public @interface SqlDerby {
      * @version 0.2.0
      * @author  Naoghuman
      */
-    int minor() default 0;
+    public int minor() default 0;
     
     /**
      * 
@@ -65,7 +65,7 @@ public @interface SqlDerby {
      * @version 0.2.0
      * @author  Naoghuman
      */
-    int patch() default 0;
+    public int patch() default 0;
     
     /**
      * 
