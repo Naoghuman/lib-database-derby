@@ -11,6 +11,7 @@ A library for `easy` accessing an [Apache Derby] database in a [JavaFX] &amp; [M
 
 
 #### Feature
+#14 [api] Create new interface 'SqlDerbyAnnotation'.
 #13 [api] Create new annotation 'SqlDerbyAction'.
 #12 [api] Create new annotation 'SqlDerby'.
 

@@ -27,13 +27,12 @@ Main topics
       - Method level
       - attribute: sequence (int)
 
-3) SqlDerbyAnnotationProvider
-    - Execute 
-       - all SqlDerby           (ordered by version)
-       - for every SqlDerbyType (order see above (1-3), (4))
-       - all SqlDerbyAction     (ordered by sequence)
-    - Possibility to catch all actions in db?
-       - Do only what isn't done.
+3) Interface SqlDerbyAnnotation
+   Class     DefaultSqlDerbyAnnotation
+    - Register all classes with the annotation 'SqlDerby'.
+    - Execute(SqlDerby.Type... types)
+       - Allowed to execute the readed annotated instances in a order dependen 
+         the version from SqlDerby and the sequence number from SqlDerbyAction.
 
 4) SqlDerbyDatabaseFactory
     - ?
